@@ -7,8 +7,7 @@ RUN apt-get update; \
   apt-get install -y curl openjdk-7-jre tomcat7; \
   curl -L http://sourceforge.net/projects/openmrs/files/releases/OpenMRS_Platform_1.10.1/openmrs.war/download \
        -o /var/lib/tomcat7/webapps/openmrs.war; \
-  apt-get install -y mysql-server; \
-  mkdir /var/lib/OpenMRS; \
+   mkdir /var/lib/OpenMRS; \
   chown tomcat7:tomcat7 /var/lib/tomcat7/openmrs-runtime.properties /var/lib/OpenMRS; \
   chmod +x /root/run.sh
 
